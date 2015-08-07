@@ -17,18 +17,16 @@
             return $app['twig']->render('address_book.html.twig', array('people' => People::getAll()));
         });
 
-        //error message says no route found for "get/people...allow:POST...but I did POST..?"
         $app->post("/people", function() use ($app) {
-            $person = new Person($_POST['name'], $_POST['phone_number'], $_POST['address']);
+            $person = new People($_POST['name'], $_POST['phone_number'], $_POST['address']);
             $person->save();
-            return $app['twig']->render('add_contact.html.twig', array('newcontact' => $person));
+            return $app['twig']->render('add_contact.html.twig', array('newperson' => $person));
 
         });
 
-        //error message the same as for /people
-        $app->post("/delete_contacts", function() use ($app){
+        $app->post("/delete_all", function() use ($app){
             People::deleteAll();
-            return $app('twig')->render('delete_contacts.html.twig');
+            return $app['twig']->render('delete_all.html.twig');
         });
 
         return $app;

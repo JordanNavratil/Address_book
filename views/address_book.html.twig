@@ -8,11 +8,11 @@
         {% if people is not empty %}
             <p>Contact List:</p>
                 <ul>
-                    {% for people in people %}
+                    {% for person in people %}
                         <div>
-                            <li>{{ place.getName}}</li>
-                            <li>{{ place.getPhone_number}}</li>
-                            <li>{{ place.getAddress}}</li>
+                            <li>{{ person.getName}}</li>
+                            <li>{{ person.getPhone_number}}</li>
+                            <li>{{ person.getAddress}}</li>
                         </div>
                     {% endfor %}
                 </ul>
@@ -24,16 +24,17 @@
                 <input type='text' name='name' id='name' class='form-control'>
             </div>
             <div class='form-group'>
-                <label for='phonenumber'>Enter Phone Number</label>
-                <input type='number' name='phonenumber' id='phonenumber' class='form-control'>
+                <label for='phone_number'>Enter Phone Number</label>
+                <input type='number' name='phone_number' id='phone_number' class='form-control'>
             </div>
             <div class='form-group'>
                 <label for='address'>Enter Address</label>
                 <input type='text' name='address' id='address' class='form-control'>
             </div>
-            <div>
-                <button form class=submit >
-                </form>
+            <button type=submit>Submit</button>
+            </form>
+            <form action='/delete_all' method='post'>
+                <button type='submit'>Clear Everything</button>
         </form>
     </body>
 </html>
