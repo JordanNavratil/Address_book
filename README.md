@@ -1,20 +1,19 @@
 Address Book App
-{Brief description of application}, {Date of current version}
+First code review of Epicodus! 08/07/2015
 
 By Jordan Navratil
 
-First code review of Epicodus!
+Description
 
-{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}
+This is an address book app to view contacts. Contact names, phone numbers, and addresses can be stored and deleted.
 
 Setup
 
-This is a great place
-to list setup instructions
-in a simple
-easy-to-understand
-format
-{Leave nothing to chance! You want it to be easy for potential employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Are there other applications this app depends on?}
+Clone this repository. Open a simple HTTP server in the top level of the cloned directory. For a mac, run the following command in your terminal:
+
+php -S localhost:8000
+
+Then open your web browser of choice to localhost:8000
 
 Technologies Used
 
