@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Directory</title>
+    </head>
+    <body>
+        <h1>Welcome to your address book</h1>
+
+        {% if people is not empty %}
+            <p>Contact List:</p>
+                <ul>
+                    {% for people in people %}
+                        <div>
+                            <li>{{ place.getName}}</li>
+                            <li>{{ place.getPhone_number}}</li>
+                            <li>{{ place.getAddress}}</li>
+                        </div>
+                    {% endfor %}
+                </ul>
+        {% endif %}
+
+        <form action='/people' method='post'>
+            <div class='form-group'>
+                <label for='name'>Enter Name</label>
+                <input type='text' name='name' id='name' class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for='phonenumber'>Enter Phone Number</label>
+                <input type='number' name='phonenumber' id='phonenumber' class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for='address'>Enter Address</label>
+                <input type='text' name='address' id='address' class='form-control'>
+            </div>
+            <div>
+                <button form class=submit >
+                </form>
+        </form>
+    </body>
+</html>
